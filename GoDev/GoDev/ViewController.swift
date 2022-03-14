@@ -103,7 +103,7 @@ class ViewController: UIViewController {
     @IBAction private func handleLogin(_ sender: UIButton) {
         view.endEditing(true)
         
-        guard let email = emailTextField.text, email.isValidEmail else {
+        guard let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), email.isValidEmail else {
             showAlert(title: "Email Inválido", message: "Digite um email válido")
             return
         }
