@@ -81,9 +81,8 @@
                                     <action selector="handleCalculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izs-4k-T8r"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-x7-6ds">
-                                <rect key="frame" x="16" y="231" width="382" height="555"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVp-x7-6ds">
+                                <rect key="frame" x="16" y="435.5" width="382" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,10 +96,13 @@
                             <constraint firstItem="J5B-C4-0og" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="7HS-ud-Iv4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J5B-C4-0og" secondAttribute="trailing" constant="16" id="BUc-7S-spg"/>
                             <constraint firstItem="bL2-fD-HDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MpN-Qm-S9m"/>
+                            <constraint firstItem="SVp-x7-6ds" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NeC-hj-qkq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bL2-fD-HDl" secondAttribute="bottom" constant="16" id="lbg-H6-Ch1"/>
                             <constraint firstItem="df3-oh-Ykx" firstAttribute="top" secondItem="J5B-C4-0og" secondAttribute="bottom" constant="24" id="nIp-Hj-5SX"/>
                             <constraint firstItem="df3-oh-Ykx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rDE-Fj-3Kc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="df3-oh-Ykx" secondAttribute="trailing" constant="16" id="vOq-cz-HxC"/>
+                            <constraint firstItem="SVp-x7-6ds" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xpC-vl-rUB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SVp-x7-6ds" secondAttribute="trailing" constant="16" id="y9F-Zh-OZU"/>
                         </constraints>
                     </view>
                     <connections>
