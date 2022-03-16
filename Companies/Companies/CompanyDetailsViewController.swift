@@ -19,11 +19,17 @@ class CompanyDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         if let company = company {
-            logoImageView.image = UIImage(named: company.imageName)
-            
-            nameLabel.text = company.name
-            descriptionLabel.text = company.description
+            configure(with: company)
         }
+    }
+    
+    // MARK: - Private methods
+    
+    private func configure(with model: Company) {
+        logoImageView.image = UIImage(named: model.imageName)
+        
+        nameLabel.text = model.name
+        descriptionLabel.text = model.description
     }
     
 }

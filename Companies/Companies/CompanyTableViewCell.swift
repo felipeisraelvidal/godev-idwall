@@ -1,10 +1,3 @@
-//
-//  CompanyTableViewCell.swift
-//  Companies
-//
-//  Created by SP12442 on 14/03/22.
-//
-
 import UIKit
 
 class CompanyTableViewCell: UITableViewCell {
@@ -30,5 +23,5 @@ class CompanyTableViewCell: UITableViewCell {
         nameLabel.text = model.name
         descriptionLabel.text = model.description
     }
-
+    
 }

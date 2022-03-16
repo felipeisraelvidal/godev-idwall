@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     private var companies: [Company] = []
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,9 +23,16 @@ class ViewController: UIViewController {
         fetchCars()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCompanyDetails" {
-            
             if let destination = segue.destination as? CompanyDetailsViewController, let company = sender as? Company {
                 destination.company = company
             }
@@ -36,6 +45,9 @@ class ViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let cell = UINib(nibName: CompanyTableViewCell.identifier, bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: CompanyTableViewCell.identifier)
         
     }
     
