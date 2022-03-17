@@ -14,6 +14,8 @@ class CategoryMoviesViewController: UIViewController {
     var category: Category?
     
     private var movies: [Movie] = []
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

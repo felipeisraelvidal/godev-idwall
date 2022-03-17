@@ -18,6 +18,8 @@ class MovieDetailsViewController: UIViewController {
     
     var movie: Movie?
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

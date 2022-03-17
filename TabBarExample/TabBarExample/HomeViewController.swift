@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     
     private var movies: [Movie] = []
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

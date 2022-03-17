@@ -13,6 +13,8 @@ class CategoriesViewController: UIViewController {
     
     private var categories = Category.allCases
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
