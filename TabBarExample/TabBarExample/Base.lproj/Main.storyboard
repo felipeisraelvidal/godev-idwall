@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="1650.7246376811595" y="439.95535714285711"/>
         </scene>
-        <!--About View Controller-->
+        <!--SwiftMovies-->
         <scene sceneID="JAn-mK-He7">
             <objects>
                 <viewController id="bRz-UI-Ugw" customClass="AboutViewController" customModule="TabBarExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,45 +87,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="rI1-WX-e8r">
-                                <rect key="frame" x="16" y="341" width="382" height="214"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F1e-Uj-eqh">
-                                        <rect key="frame" x="141" y="0.5" width="100" height="99"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="E71-68-TNL"/>
-                                            <constraint firstAttribute="width" constant="100" id="amu-z4-spA"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1N6-67-1cE">
-                                        <rect key="frame" x="44" y="124" width="294" height="90"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftMovies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfF-Cc-I4F">
-                                                <rect key="frame" x="0.0" y="0.0" width="294" height="41"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App com sinopse de filmes separados por gêneros" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3o-dc-udB">
-                                                <rect key="frame" x="0.0" y="49" width="294" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="24" estimatedSectionHeaderHeight="-1" sectionFooterHeight="24" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-5N-WWR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L4R-2L-9Rf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L4R-2L-9Rf" firstAttribute="trailing" secondItem="rI1-WX-e8r" secondAttribute="trailing" constant="16" id="9um-jk-8qt"/>
-                            <constraint firstItem="rI1-WX-e8r" firstAttribute="centerY" secondItem="hue-j7-JB8" secondAttribute="centerY" id="C9S-M2-d4E"/>
-                            <constraint firstItem="rI1-WX-e8r" firstAttribute="leading" secondItem="L4R-2L-9Rf" secondAttribute="leading" constant="16" id="QXa-KI-eXG"/>
+                            <constraint firstAttribute="bottom" secondItem="mo5-5N-WWR" secondAttribute="bottom" id="48Y-m0-dkG"/>
+                            <constraint firstItem="mo5-5N-WWR" firstAttribute="trailing" secondItem="L4R-2L-9Rf" secondAttribute="trailing" id="4La-n0-O5B"/>
+                            <constraint firstItem="mo5-5N-WWR" firstAttribute="leading" secondItem="L4R-2L-9Rf" secondAttribute="leading" id="ARq-Zu-6AQ"/>
+                            <constraint firstItem="mo5-5N-WWR" firstAttribute="top" secondItem="hue-j7-JB8" secondAttribute="top" id="CVd-72-9fM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="n3a-BX-1bR"/>
+                    <navigationItem key="navigationItem" title="SwiftMovies" id="n3a-BX-1bR"/>
+                    <connections>
+                        <outlet property="tableView" destination="mo5-5N-WWR" id="y0R-U9-LuW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdp-Hw-nPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -313,8 +292,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Puz-8P-c2I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sobre" image="info.circle" catalog="system" id="uKP-15-70l"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nZa-Mx-1W8">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="nZa-Mx-1W8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -339,6 +318,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
